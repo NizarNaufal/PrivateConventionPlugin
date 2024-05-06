@@ -69,6 +69,11 @@ gradlePlugin {
             implementationClass = "AndroidKoinConventionPlugin"
         }
 
+        register("androidBenchmark") {
+            id = "technzr.android.benchmark"
+            implementationClass = "AndroidBenchmarkConventionPlugin"
+        }
+
         register("gradleVersionChecker") {
             id = "technzr.gradle.version"
             implementationClass = "GradleVersionConventionPlugin"
