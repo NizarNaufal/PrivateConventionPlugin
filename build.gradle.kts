@@ -78,5 +78,15 @@ gradlePlugin {
             id = "technzr.gradle.version"
             implementationClass = "GradleVersionConventionPlugin"
         }
+
+        register("androidSigningConfig") {
+            id = "technzr.android.signingconfig"
+            implementationClass = "AndroidSigningConfigConventionPlugin"
+        }
+
+        register("apiKeyProvider") {
+            id = "technzr.apikey.provider"
+            implementationClass = "ApiKeyProviderConventionPlugin"
+        }
     }
 }
