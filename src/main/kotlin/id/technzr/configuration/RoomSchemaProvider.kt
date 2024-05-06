@@ -11,5 +11,5 @@ class RoomSchemaProvider(
     @get:PathSensitive(PathSensitivity.RELATIVE)
     val schemaDir: File,
 ) : CommandLineArgumentProvider {
-    override fun asArguments() = listOf("room.schemaLocation=${schemaDir.path}")
+    override fun asArguments() = listOf("-Aroom.schemaLocation=${schemaDir.path}")
 }

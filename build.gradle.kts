@@ -19,9 +19,9 @@ tasks.withType<KotlinCompile>().configureEach {
 }
 
 dependencies {
-    compileOnly("com.android.tools.build:gradle:8.0.0")
-    compileOnly("org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.0")
-    compileOnly("com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin:1.8.20-1.0.11")
+    compileOnly("com.android.tools.build:gradle:8.1.2")
+    compileOnly("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.20")
+    compileOnly("com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin:1.9.22-1.0.17")
     compileOnly("io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.23.0")
     compileOnly("com.github.ben-manes:gradle-versions-plugin:0.46.0")
 }
@@ -53,13 +53,22 @@ gradlePlugin {
             implementationClass = "AndroidRoomConventionPlugin"
         }
         register("detekt") {
-            id = "logee.library.detekt"
+            id = "technzr.library.detekt"
             implementationClass = "DetektConventionPlugin"
         }
-        register("okhttpRetrofit") {
-            id = "technzr.okhttp.retrofit"
-            implementationClass = "OkhttpRetrofitConventionPlugin"
+        register("okhttp") {
+            id = "technzr.okhttp.client"
+            implementationClass = "OkhttpConventionPlugin"
         }
+        register("retrofit") {
+            id = "technzr.retrofit"
+            implementationClass = "RetrofitConventionPlugin"
+        }
+        register("koinInject") {
+            id = "technzr.koin.inject"
+            implementationClass = "AndroidKoinConventionPlugin"
+        }
+
         register("gradleVersionChecker") {
             id = "technzr.gradle.version"
             implementationClass = "GradleVersionConventionPlugin"

@@ -11,10 +11,12 @@ import java.io.File
 class AndroidRoomConventionPlugin : Plugin<Project> {
     override fun apply(project: Project) {
         with(project) {
-            pluginManager.apply("com.google.devtools.ksp")
+            with(pluginManager){
+                apply("com.google.devtools.ksp")
+            }
 
             extensions.configure<KspExtension> {
-                arg(RoomSchemaProvider(File(projectDir, "schemas")))
+                arg(RoomSchemaProvider(File(projectDir, "src")))
             }
 
             dependencies {
