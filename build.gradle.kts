@@ -24,6 +24,7 @@ dependencies {
     compileOnly("com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin:1.9.22-1.0.17")
     compileOnly("io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.23.0")
     compileOnly("com.github.ben-manes:gradle-versions-plugin:0.46.0")
+    compileOnly("com.diffplug.spotless:spotless-plugin-gradle:6.23.3")
 }
 
 gradlePlugin {
